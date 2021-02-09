@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actionTypes";
+import { ADD_TODO, TOGGLE_TODO, PURGE_TODO } from "../actionTypes";
 
 const initialState = [];
 
@@ -22,6 +22,9 @@ export default function(state = initialState, action) {
               ? {...todo, completed: !todo.completed}
               : todo
       );
+    }
+    case PURGE_TODO: {
+      return state.filter(todo=>!todo.completed)
     }
     default:
       return state;

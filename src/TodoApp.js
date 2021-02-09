@@ -1,6 +1,7 @@
 import React from "react";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
+import PurgeTodo from "./components/PurgeTodo"
 import "./styles.css";
 
 export default function TodoApp() {
@@ -8,6 +9,7 @@ export default function TodoApp() {
     <div className="todo-app">
       <h1>Todo List</h1>
       <AddTodo />
+      <PurgeTodo />
       <TodoList />
     </div>
   );
